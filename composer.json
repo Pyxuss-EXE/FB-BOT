@@ -1,0 +1,17 @@
+{
+    "name": "fb-bot/checker",
+    "description": "Telegram bot for Facebook number checking",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "irazasyed/telegram-bot-sdk": "^3.0",
+        "vlucas/phpdotenv": "^5.5",
+        "monolog/monolog": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FBBot\\": "src/"
+        },
+        "files": ["src/helpers.php"]
+    }
+}

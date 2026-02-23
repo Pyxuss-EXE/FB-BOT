@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: fb-bot
+    env: docker
+    repo: https://github.com/pyxuss-exe/FB-BOT
+    branch: main
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: BOT_TOKEN
+        value: 8509870401:AAERu9ClbziFj7ZdManRfeVnrc8Res3RdKQ
+    disk:
+      name: storage
+      mountPath: /var/www/html/storage
+      sizeGB: 1

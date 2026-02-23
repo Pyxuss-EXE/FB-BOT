@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  fb-bot:
+    build: .
+    container_name: fb-bot
+    restart: always
+    ports:
+      - "8080:80"
+    volumes:
+      - ./storage:/var/www/html/storage
+      - ./logs:/var/www/html/logs
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
